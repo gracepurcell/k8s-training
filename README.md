@@ -1,5 +1,31 @@
 # k8s-training
 
+Suggested Full Strucutre:
+
+project-root/
+│
+├── frontend/
+│   ├── index.html
+│   ├── styles.css
+│   ├── script.js
+│   └── Dockerfile
+│
+├── backend/
+│   ├── db.json
+│   └── Dockerfile
+│
+├── nginx/
+│   └── nginx.conf
+│
+├── docker-compose.yml
+└── k8s/
+    ├── frontend-deployment.yaml
+    ├── backend-deployment.yaml
+    ├── frontend-service.yaml
+    ├── backend-service.yaml
+    └── ingress.yaml
+
+    
 The objective of the project was to deploy a static website using nginx, docker and aws eks
 
 **Steps to build and push the Docker image.**
