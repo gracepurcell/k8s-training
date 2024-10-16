@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-loadbalance-service
+  namespace: k8s-training-space
+spec:
+  type: LoadBalancer
+  selector:
+    app: frontend-app
+  ports:
+  - port: 80 # <-- This is the port ~exposed~ to the web
+    targetPort: 90 # <-- this should refer to your spec.template.spec.containers.ports.containerPort
