@@ -1,3 +1,5 @@
-FROM nginx:alpine
+FROM nginx:latest
 
-# here you want to copy the files into nginx, including the nginx.conf
+COPY ./frontend/index.html /usr/share/nginx/html/index.html
+
+COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
