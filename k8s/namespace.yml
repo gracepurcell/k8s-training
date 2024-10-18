@@ -1,4 +1,10 @@
+---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: k8s-training-space
+  name: k8s-training-frontend
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: k8s-training-backend

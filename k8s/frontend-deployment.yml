@@ -1,23 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-app
-  namespace: k8s-training-space
+  name: frontend-deployment
+  namespace: k8s-training-frontend
 spec:
   selector:
     matchLabels:
-      app: frontend-app
+      app: frontend
   template:
     metadata:
       labels:
-        app: frontend-app
+        app: frontend
     spec:
       containers:
-      - name: frontend-app-container
-        image: disgraceful/k8s-training:frontend-end-nginx
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+      - name: frontend
+        image: disgraceful/k8s-training:fe-w-spell-port-90 
         ports:
         - containerPort: 90 # <-- this should be the port specified in your nginx conf file
+        # command: [ "/bin/bash", "-c", "--" ]
+        # args: [ "while true; do sleep 30; done;" ]

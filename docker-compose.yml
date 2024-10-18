@@ -19,14 +19,6 @@ services:
       - 8081:3000
     networks:
       - jointNet
-    
-  # nginx:
-  #   image: nginx:latest
-  #   container_name: nginx
-  #   ports:
-  #     - 80:80
-  #   volumes:
-  #     - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
 
 networks:
   jointNet:
